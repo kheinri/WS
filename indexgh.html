@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuhl kaufen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo-container img {
+            width: 150px;
+            height: auto;
+        }
+        h1 {
+            color: #333;
+            font-size: 22px;
+            text-align: center;
+        }
+        p, ul {
+            color: #666;
+            text-align: left;
+            font-size: 16px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        select, button {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .agb {
+            font-size: 14px;
+            text-align: center;
+        }
+        .agb a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function weiterleiten() {
+            let menge = document.getElementById("menge").value;
+            window.location.href = "danke.html?anzahl=" + menge;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo1.png" alt="Logo">
+        </div>
+        <h1>Stuhl kaufen</h1>
+        <div class="content">
+            <p><strong>Produktbeschreibung:</strong></p>
+            <ul>
+                <li>Wartezimmerstuhl mit bequemer Schaumstoffpolsterung</li>
+                <li>Gestell aus verchromtem Stahlrohr</li>
+                <li>4 Jahre Herstellergarantie</li>
+                <li>Scheuerbeständigkeit: 20.000 Touren</li>
+                <li>Lichtechtheit: 3</li>
+                <li>Maße: Höhe 75 cm, Breite 65 cm, Tiefe 60 cm</li>
+            </ul>
+            <p class="price">Preis: 244,90 € brutto pro Stück</p>
+            <label for="menge">Menge wählen:</label>
+            <select id="menge">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <p class="agb">Mit dem Kauf akzeptieren Sie unsere <a href="AGB.pdf" target="_blank">AGB</a>.</p>
+            <button onclick="weiterleiten()">Kaufen</button>
+            <div class="image-section">
+                <img src="Stuhl1.jfif" alt="Produktbild Stuhl">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
