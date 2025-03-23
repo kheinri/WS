@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danke für Ihren Einkauf</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; background: #f4f4f4; border-radius: 10px; }
+    </style>
+    <script>
+        function ladeDankeSeite() {
+            let params = new URLSearchParams(window.location.search);
+            let anzahl = params.get("anzahl") || 1;
+            let gesamtAnzahl = anzahl * 100;
+            document.getElementById("dankeText").innerText = "Vielen Dank für Ihren Einkauf von " + gesamtAnzahl + " Wartezimmerstühlen!";
+        }
+    </script>
+</head>
+<body onload="ladeDankeSeite()">
+    <div class="container">
+        <h1 id="dankeText"></h1>
+    </div>
+</body>
+</html>
