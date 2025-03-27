@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danke für Ihren Einkauf</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 20px; 
+            background-color: #f4f4f4;
+        }
+        .container { 
+            width: 90%; 
+            max-width: 400px; 
+            margin: auto; 
+            padding: 15px; 
+            background: white; 
+            border-radius: 10px; 
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            font-size: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function ladeDankeSeite() {
+            let params = new URLSearchParams(window.location.search);
+            let anzahl = params.get("anzahl") || 1;
+            document.getElementById("dankeText").innerText = 
+                "Vielen Dank für Ihre Bestellung der " + anzahl + " Wartezimmerstühle sowie für den Abschluss des Vertrags über den Reinigungsservice.";
+            document.getElementById("reinigungText").innerText = 
+                "Die Reinigung erfolgt alle drei Monate und kostet 200 € pro Durchgang.";
+        }
+    </script>
+</head>
+<body onload="ladeDankeSeite()">
+    <div class="container">
+        <h1 id="dankeText"></h1>
+        <p id="reinigungText"></p>
+    </div>
+</body>
+</html>
